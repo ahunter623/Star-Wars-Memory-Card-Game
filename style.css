@@ -19,7 +19,7 @@ section {
     position: absolute;
 }
 
-.back {
+.face {
     background: white;
     backface-visibility: hidden;
 }
@@ -30,7 +30,7 @@ section {
 
 body {
     height: 100vh;
-    background-image: image("Background-Image/star-wars-effect-cover.jpeg");
+    background-image: url("Background-Image/star-wars-effect-cover.jpeg");
     display: flex;
     align-items: center;
     justify-content: center;
