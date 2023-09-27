@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 section {
     display: grid;
     grid-template-columns: repeat(4, 8rem);
@@ -12,14 +18,19 @@ section {
     transition: all 2s ease;
 }
 
-.face, 
+.face {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 .back {
     height: 100%;
     width: 100%;
     position: absolute;
 }
 
-.face {
+.back {
     background: white;
     backface-visibility: hidden;
 }
@@ -31,6 +42,7 @@ section {
 body {
     height: 100vh;
     background-image: url("Background-Image/star-wars-effect-cover.jpeg");
+    background-size: 100% auto;
     display: flex;
     align-items: center;
     justify-content: center;
