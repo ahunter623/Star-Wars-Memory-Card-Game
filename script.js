@@ -1,6 +1,6 @@
 const section = document.querySelector("section");
 const playerLivesCount = document.querySelector("span");
-const playerLives = 5;
+let playerLives = 5;
 
 playerLivesCount.textContent = playerLives
 
@@ -85,8 +85,26 @@ if (flippedCards.length === 2) {
             card.classList.remove("flipped");
             setTimeout(() => card.classList.remove("toggleCard"), 1000);
        });
+       playerLives--;
+       playerLivesCount.textContent = playerLives;
+       if (playerLives === 0) {
+        restart();
+       }
     }
   }
 };
 }
+
+// Restart
+const restart = () => {
+    let cardData = randomize();
+    let faces = document.querySelectorAll(".face");
+    let cards = document.querySelectorAll(".card");
+    cardData.forEach((item,index) => {
+        cards[index].classList.remove("toggleCard");
+    })
+    playerLives = 6;
+    playerLivesCount.textContent = playerLives;
+}
+
 cardGenerator()
