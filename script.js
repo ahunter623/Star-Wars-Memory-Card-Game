@@ -67,6 +67,7 @@ const checkCards = (e) => {
     const clickedCard = e.target;
     clickedCard.classList.add("flipped");
     const flippedCards = document.querySelectorAll(".flipped")
+    const toggleCard = document.querySelectorAll(".toggleCard");
     console.log(flippedCards);
 
     // Game Logic
@@ -88,23 +89,37 @@ if (flippedCards.length === 2) {
        playerLives--;
        playerLivesCount.textContent = playerLives;
        if (playerLives === 0) {
-        restart();
+        restart("You are weak!");
        }
     }
+  }
+  //Game Winner
+  if (toggleCard.length === 16) {
+    restart("The force is strong with you!");
   }
 };
 }
 
 // Restart
-const restart = () => {
+const restart = (text) => {
     let cardData = randomize();
     let faces = document.querySelectorAll(".face");
     let cards = document.querySelectorAll(".card");
-    cardData.forEach((item,index) => {
+    section.style.pointerEvents = "none";
+    cardData.forEach((item, index) => {
         cards[index].classList.remove("toggleCard");
+
+        //Randomize / Shuffle Cards
+        setTimeout(()=> {
+        cards[index].style.pointerEvents = "all";
+        faces[index].src = item.imgSrc;
+        cards[index].setAttribute("name", item.name);
+        section.style.pointerEvents = "all";
+        }, 1000);
     })
-    playerLives = 6;
+    playerLives = 5;
     playerLivesCount.textContent = playerLives;
+    setTimeout(() => window.alert(text), 100);
 }
 
 cardGenerator()

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1 {
+    color: gold;
+}
+
 body {
     height: 100vh;
     background-image: url("Background-Image/star-wars-effect-cover.jpeg");
@@ -13,6 +17,10 @@ body {
     justify-content: center;
     flex-direction: column;
 
+}
+
+p {
+    color: gold;
 }
 
 section {
