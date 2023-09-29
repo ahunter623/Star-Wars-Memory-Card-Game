@@ -1,5 +1,8 @@
 # Star-Wars-Memory-Card-Game
 
+![Star Wars Dark and Light Saber](https://github.com/ahunter623/Star-Wars-Memory-Card-Game/assets/132928340/4f300519-a812-41dd-8b9a-62854b1e5b45)
+
+
 Game Features:
 
 # Star-Wars-Memory-Card-Game is a classic memory card game with a Star Wars theme
@@ -9,6 +12,8 @@ A score board will keep track of the number of pairs you match
 There is a timer to challenge players to match all pairs as fast as possible
 The design is perfect for any and all of your devices
 If The Force is not strong enough with you, tap out and press the reset button to start a new game
+
+![Darth Vader Kneel1](https://github.com/ahunter623/Star-Wars-Memory-Card-Game/assets/132928340/3b8cdb08-c5a4-4382-82d8-d1e42614c915)
 
 
 How to Play:
